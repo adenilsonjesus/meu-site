@@ -6,14 +6,49 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0e0e0e;
+    background: #0e0e0e;
     color: white;
 }
 
-/* HERO SECTION */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* TOPBAR */
+.topbar {
+    background: #111;
+    padding: 15px 0;
+    border-bottom: 1px solid #222;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.topbar nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.topbar nav a:hover {
+    color: #3a5f3a;
+}
+
+/* HERO */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,123 +56,92 @@ body {
     overflow: hidden;
 }
 
-/* Fundo animado */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("assets/bg.jpg") no-repeat center center/cover;
-    animation: zoomEffect 20s ease-in-out infinite alternate;
-    transform: scale(1.05);
-    z-index: 0;
+    background: url("../assets/bg.jpg") no-repeat center center/cover;
+    animation: zoom 20s ease-in-out infinite alternate;
 }
 
-/* Overlay escuro */
 .hero::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.85)
-    );
-    z-index: 1;
+    background: rgba(0,0,0,0.75);
 }
 
-.overlay {
+.hero .overlay {
     position: relative;
     z-index: 2;
-    padding: 40px;
 }
 
-/* Título impactante */
 .hero h1 {
-    font-size: 64px;
-    letter-spacing: 4px;
-    color: #ffffff;
-    text-shadow:
-        0 0 10px rgba(58,95,58,0.8),
-        0 0 20px rgba(58,95,58,0.6),
-        0 0 40px rgba(0,0,0,0.9);
-    margin-bottom: 20px;
+    font-size: 56px;
+    margin-bottom: 15px;
 }
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 25px;
+/* PvE COLOR */
+.hero-pve::after {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,40,0,0.6),
+        rgba(0,0,0,0.9)
+    );
 }
 
-/* Botões */
-.buttons .btn {
-    display: inline-block;
-    padding: 14px 32px;
-    margin: 12px;
-    background: linear-gradient(45deg, #3a5f3a, #4d7c4d);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    box-shadow: 0 0 15px rgba(58,95,58,0.6);
-}
-
-.buttons .btn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 25px rgba(58,95,58,1);
-}
-
-.secondary {
-    background: linear-gradient(45deg, #222, #444);
-}
-
-/* Animação zoom */
-@keyframes zoomEffect {
-    from {
-        transform: scale(1.05);
-    }
-    to {
-        transform: scale(1.15);
-    }
-}
-
-/* Seções */
-.info, .ranking {
-    padding: 80px 20px;
+/* SECTIONS */
+.section-dark {
+    padding: 80px 0;
+    background: #141414;
     text-align: center;
 }
 
-.info h2, .ranking h2 {
+.section-dark h2 {
     margin-bottom: 20px;
-    font-size: 32px;
 }
 
-.cards {
+.section-grid {
+    padding: 80px 0;
+    background: #0f0f0f;
+}
+
+.grid {
     display: flex;
-    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
-    margin-top: 40px;
+    justify-content: center;
 }
 
-.card {
-    background-color: #1a1a1a;
-    padding: 25px;
-    margin: 15px;
-    width: 260px;
-    border-radius: 10px;
-    border: 1px solid #3a5f3a;
+.grid-card {
+    background: #1a1a1a;
+    padding: 30px;
+    width: 280px;
+    border-left: 4px solid #3a5f3a;
     transition: 0.3s;
 }
 
-.card:hover {
+.grid-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(58,95,58,0.4);
+}
+
+.rules {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.rules li {
+    margin-bottom: 10px;
 }
 
 footer {
-    background-color: #111;
-    padding: 20px;
+    background: #111;
+    padding: 25px;
     text-align: center;
-    font-size: 14px;
+}
+
+/* ANIMATION */
+@keyframes zoom {
+    from { transform: scale(1.05); }
+    to { transform: scale(1.15); }
 }
