@@ -117,9 +117,10 @@ body {
 }
 
 /*LOGOTIPO*/
-.hero-image img {
-    max-width: 750px;
-    margin-left: 90px;  /* joga para direita */
+.hero-image {
+    flex: 1;
+    text-align: right;
+    padding-left: 100px;
 }
 
 /* BOTÕES MODERNOS */
@@ -312,6 +313,7 @@ footer {
     }
 
 }
+
 
 
 
