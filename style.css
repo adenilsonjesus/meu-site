@@ -1,3 +1,7 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,32 +10,63 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #0e0e0e;
-    color: white;
 }
+
+/* ========================= */
+/* CONTAINER PADRÃO */
+/* ========================= */
 
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 }
 
-/* TOPBAR */
+/* ========================= */
+/* ===== TOPO CLARO ===== */
+/* ========================= */
+
+.topbar-light {
+    padding: 20px 0;
+    background: #ffffff;
+}
+
+.topbar-light .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+.topbar-light nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #111;
+    transition: 0.3s;
+}
+
+.topbar-light nav a:hover {
+    color: #3a5f3a;
+}
+
+/* ========================= */
+/* ===== TOPO ESCURO ===== */
+/* ========================= */
+
 .topbar {
     background: #111;
-    padding: 15px 0;
-    border-bottom: 1px solid #222;
+    padding: 20px 0;
 }
 
 .topbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    font-weight: bold;
-    letter-spacing: 2px;
 }
 
 .topbar nav a {
@@ -45,22 +80,96 @@ body {
     color: #3a5f3a;
 }
 
-/* HERO */
+/* ========================= */
+/* ===== HERO MODERNO ===== */
+/* ========================= */
+
+.hero-modern {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+}
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.hero-text span {
+    color: #3a5f3a;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.hero-image img {
+    max-width: 450px;
+}
+
+/* BOTÕES MODERNOS */
+
+.btn-primary {
+    padding: 14px 28px;
+    background: #3a5f3a;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #2f4f2f;
+}
+
+.btn-secondary {
+    padding: 14px 28px;
+    border: 2px solid #3a5f3a;
+    color: #3a5f3a;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #3a5f3a;
+    color: white;
+}
+
+/* ========================= */
+/* ===== HERO DARK ===== */
+/* ========================= */
+
 .hero {
     position: relative;
-    height: 70vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
+    color: white;
 }
 
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../assets/bg.jpg") no-repeat center center/cover;
+    background: url("assets/bg.jpg") no-repeat center center/cover;
     animation: zoom 20s ease-in-out infinite alternate;
 }
 
@@ -81,7 +190,15 @@ body {
     margin-bottom: 15px;
 }
 
-/* PvE COLOR */
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* ========================= */
+/* ===== PvE ===== */
+/* ========================= */
+
 .hero-pve::after {
     background: linear-gradient(
         to bottom,
@@ -90,11 +207,27 @@ body {
     );
 }
 
-/* SECTIONS */
+/* ========================= */
+/* ===== PvP ===== */
+/* ========================= */
+
+.hero-pvp::after {
+    background: linear-gradient(
+        to bottom,
+        rgba(60,0,0,0.6),
+        rgba(0,0,0,0.95)
+    );
+}
+
+/* ========================= */
+/* ===== SEÇÕES DARK ===== */
+/* ========================= */
+
 .section-dark {
     padding: 80px 0;
     background: #141414;
     text-align: center;
+    color: white;
 }
 
 .section-dark h2 {
@@ -104,6 +237,7 @@ body {
 .section-grid {
     padding: 80px 0;
     background: #0f0f0f;
+    color: white;
 }
 
 .grid {
@@ -134,103 +268,45 @@ body {
     margin-bottom: 10px;
 }
 
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
 footer {
     background: #111;
     padding: 25px;
     text-align: center;
+    color: white;
 }
 
-/* ANIMATION */
+/* ========================= */
+/* ANIMAÇÃO */
+/* ========================= */
+
 @keyframes zoom {
     from { transform: scale(1.05); }
     to { transform: scale(1.15); }
 }
 
 /* ========================= */
-/* LAYOUT MODERNO PRINCIPAL */
+/* RESPONSIVO */
 /* ========================= */
 
-body {
-    background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
-    color: #111;
-}
+@media(max-width: 900px) {
 
-.topbar-light {
-    padding: 20px 0;
-}
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.topbar-light .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .hero-image img {
+        margin-top: 40px;
+        max-width: 300px;
+    }
 
-.logo-text {
-    font-weight: bold;
-    letter-spacing: 2px;
-}
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.topbar-light nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #111;
-    transition: 0.3s;
 }
-
-.topbar-light nav a:hover {
-    color: #3a5f3a;
-}
-
-.hero-modern {
-    height: 85vh;
-    display: flex;
-    align-items: center;
-}
-
-.hero-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hero-text {
-    max-width: 500px;
-}
-
-.hero-text h1 {
-    font-size: 52px;
-    margin-bottom: 20px;
-}
-
-.hero-text span {
-    color: #3a5f3a;
-}
-
-.hero-text p {
-    margin-bottom: 30px;
-}
-
-.hero-buttons a {
-    margin-right: 15px;
-}
-
-.btn-primary {
-    padding: 14px 28px;
-    background: #3a5f3a;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-.btn-secondary {
-    padding: 14px 28px;
-    border: 2px solid #3a5f3a;
-    color: #3a5f3a;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-.hero-image img {
-    max-width: 450px;
-}
-
