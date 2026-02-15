@@ -116,8 +116,10 @@ body {
     color: #333;
 }
 
+/*LOGOTIPO*/
 .hero-image img {
     max-width: 750px;
+    margin-left: 80px;  /* joga para direita */
 }
 
 /* BOTÕES MODERNOS */
@@ -310,5 +312,6 @@ footer {
     }
 
 }
+
 
 
