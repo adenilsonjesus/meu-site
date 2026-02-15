@@ -1,87 +1,44 @@
-/* ========================= */
-/* LAYOUT MODERNO PRINCIPAL */
-/* ========================= */
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dayz Vanilla Brasil</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
-    color: #111;
-}
+<header class="topbar-light">
+    <div class="container">
+        <div class="logo-text">DAYZ VANILLA BRASIL</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/pve">Servidor PvE</a>
+            <a href="/pvp">Servidor PvP</a>
+            <a href="https://discord.gg/rz8z2mus" target="_blank">Discord</a>
+        </nav>
+    </div>
+</header>
 
-.topbar-light {
-    padding: 20px 0;
-}
+<section class="hero-modern">
+    <div class="container hero-flex">
+        
+        <div class="hero-text">
+            <h1>Bem-vindo à<br><span>Dayz Vanilla Brasil</span></h1>
+            <p>Sobrevivência hardcore. Servidores PvE e PvP separados.</p>
 
-.topbar-light .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+            <div class="hero-buttons">
+                <a href="/pve" class="btn-primary">Servidor PvE</a>
+                <a href="/pvp" class="btn-secondary">Servidor PvP</a>
+            </div>
+        </div>
 
-.logo-text {
-    font-weight: bold;
-    letter-spacing: 2px;
-}
+        <div class="hero-image">
+            <img src="assets/logo.png" alt="Dayz Vanilla Brasil">
+        </div>
 
-.topbar-light nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #111;
-    transition: 0.3s;
-}
+    </div>
+</section>
 
-.topbar-light nav a:hover {
-    color: #3a5f3a;
-}
-
-.hero-modern {
-    height: 85vh;
-    display: flex;
-    align-items: center;
-}
-
-.hero-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hero-text {
-    max-width: 500px;
-}
-
-.hero-text h1 {
-    font-size: 52px;
-    margin-bottom: 20px;
-}
-
-.hero-text span {
-    color: #3a5f3a;
-}
-
-.hero-text p {
-    margin-bottom: 30px;
-}
-
-.hero-buttons a {
-    margin-right: 15px;
-}
-
-.btn-primary {
-    padding: 14px 28px;
-    background: #3a5f3a;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-.btn-secondary {
-    padding: 14px 28px;
-    border: 2px solid #3a5f3a;
-    color: #3a5f3a;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-.hero-image img {
-    max-width: 450px;
-}
+</body>
+</html>
