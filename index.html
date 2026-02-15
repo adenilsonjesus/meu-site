@@ -1,74 +1,87 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PvE | Dayz Vanilla Brasil</title>
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
+/* ========================= */
+/* LAYOUT MODERNO PRINCIPAL */
+/* ========================= */
 
-<header class="topbar">
-    <div class="container">
-        <div class="logo">DAYZ VANILLA BRASIL</div>
-        <nav>
-            <a href="/">Início</a>
-            <a href="/pve">PvE</a>
-            <a href="/pvp">PvP</a>
-            <a href="https://discord.gg/rz8z2mus" target="_blank">Discord</a>
-        </nav>
-    </div>
-</header>
+body {
+    background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+    color: #111;
+}
 
-<section class="hero hero-pve">
-    <div class="overlay">
-        <h1>SERVIDOR PvE</h1>
-        <p>Sobrevivência cooperativa. Explore, construa e evolua.</p>
-    </div>
-</section>
+.topbar-light {
+    padding: 20px 0;
+}
 
-<section class="section-dark">
-    <div class="container">
-        <h2>Experiência PvE Hardcore</h2>
-        <p>
-            Ambiente focado em sobrevivência cooperativa,
-            economia balanceada e construção livre.
-        </p>
-    </div>
-</section>
+.topbar-light .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-<section class="section-grid">
-    <div class="container grid">
-        <div class="grid-card">
-            <h3>Sem PvP</h3>
-            <p>Zero agressão entre jogadores.</p>
-        </div>
-        <div class="grid-card">
-            <h3>Bases Protegidas</h3>
-            <p>Construção livre e protegida.</p>
-        </div>
-        <div class="grid-card">
-            <h3>Eventos</h3>
-            <p>Eventos PvE organizados pela staff.</p>
-        </div>
-    </div>
-</section>
+.logo-text {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
-<section class="section-dark">
-    <div class="container">
-        <h2>Regras Principais</h2>
-        <ul class="rules">
-            <li>Proibido matar jogadores.</li>
-            <li>Proibido destruir bases.</li>
-            <li>Proibido explorar bugs.</li>
-            <li>Respeito obrigatório.</li>
-        </ul>
-    </div>
-</section>
+.topbar-light nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #111;
+    transition: 0.3s;
+}
 
-<footer>
-    © 2026 Dayz Vanilla Brasil - PvE
-</footer>
+.topbar-light nav a:hover {
+    color: #3a5f3a;
+}
 
-</body>
-</html>
+.hero-modern {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero-text span {
+    color: #3a5f3a;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+}
+
+.hero-buttons a {
+    margin-right: 15px;
+}
+
+.btn-primary {
+    padding: 14px 28px;
+    background: #3a5f3a;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn-secondary {
+    padding: 14px 28px;
+    border: 2px solid #3a5f3a;
+    color: #3a5f3a;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.hero-image img {
+    max-width: 450px;
+}
