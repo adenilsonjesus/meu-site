@@ -120,7 +120,7 @@ body {
 .hero-image {
     flex: 1;
     text-align: right;
-    padding-left: 100px;
+    padding-left: 80px;
 }
 
 /* BOTÕES MODERNOS */
@@ -313,6 +313,7 @@ footer {
     }
 
 }
+
 
 
 
