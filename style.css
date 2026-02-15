@@ -13,7 +13,7 @@ body {
 }
 
 /* ========================= */
-/* CONTAINER PADRÃO */
+/* CONTAINER */
 /* ========================= */
 
 .container {
@@ -23,7 +23,7 @@ body {
 }
 
 /* ========================= */
-/* ===== TOPO CLARO ===== */
+/* TOPO CLARO */
 /* ========================= */
 
 .topbar-light {
@@ -55,7 +55,7 @@ body {
 }
 
 /* ========================= */
-/* ===== TOPO ESCURO ===== */
+/* TOPO ESCURO */
 /* ========================= */
 
 .topbar {
@@ -81,7 +81,7 @@ body {
 }
 
 /* ========================= */
-/* ===== HERO MODERNO ===== */
+/* HERO MODERNO (HOME) */
 /* ========================= */
 
 .hero-modern {
@@ -116,13 +116,14 @@ body {
     color: #333;
 }
 
-/*LOGOTIPO*/
 .hero-image img {
     max-width: 750px;
     transform: translateX(150px);
 }
 
-/* BOTÕES MODERNOS */
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
 
 .btn-primary {
     padding: 14px 28px;
@@ -153,7 +154,7 @@ body {
 }
 
 /* ========================= */
-/* ===== HERO DARK ===== */
+/* HERO DARK (PvE / PvP) */
 /* ========================= */
 
 .hero {
@@ -197,9 +198,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* ========================= */
-/* ===== PvE ===== */
-/* ========================= */
+/* PvE */
 
 .hero-pve::after {
     background: linear-gradient(
@@ -209,9 +208,7 @@ body {
     );
 }
 
-/* ========================= */
-/* ===== PvP ===== */
-/* ========================= */
+/* PvP */
 
 .hero-pvp::after {
     background: linear-gradient(
@@ -222,7 +219,7 @@ body {
 }
 
 /* ========================= */
-/* ===== SEÇÕES DARK ===== */
+/* SEÇÕES DARK */
 /* ========================= */
 
 .section-dark {
@@ -271,48 +268,6 @@ body {
 }
 
 /* ========================= */
-/* FOOTER */
-/* ========================= */
-
-footer {
-    background: #111;
-    padding: 25px;
-    text-align: center;
-    color: white;
-}
-
-/* ========================= */
-/* ANIMAÇÃO */
-/* ========================= */
-
-@keyframes zoom {
-    from { transform: scale(1.05); }
-    to { transform: scale(1.15); }
-}
-
-/* ========================= */
-/* RESPONSIVO */
-/* ========================= */
-
-@media(max-width: 900px) {
-
-    .hero-flex {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-image img {
-        margin-top: 40px;
-        max-width: 300px;
-    }
-
-    .grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-}
-/* ========================= */
 /* SERVIDORES PAGE */
 /* ========================= */
 
@@ -355,23 +310,6 @@ footer {
     transform: translateY(-6px);
 }
 
-.server-card h2 {
-    margin-bottom: 15px;
-}
-
-.server-card p {
-    margin-bottom: 20px;
-}
-
-.server-card ul {
-    list-style: none;
-    margin-bottom: 25px;
-}
-
-.server-card ul li {
-    margin-bottom: 8px;
-}
-
 .server-card.pve {
     border-top: 4px solid #3a5f3a;
 }
@@ -380,19 +318,45 @@ footer {
     border-top: 4px solid #8b1c1c;
 }
 
+/* ========================= */
+/* FOOTER */
+/* ========================= */
 
+footer {
+    background: #111;
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
 
+/* ========================= */
+/* ANIMAÇÃO */
+/* ========================= */
 
+@keyframes zoom {
+    from { transform: scale(1.05); }
+    to { transform: scale(1.15); }
+}
 
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
 
+@media(max-width: 900px) {
 
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .hero-image img {
+        margin-top: 40px;
+        max-width: 320px;
+        transform: none;
+    }
 
-
-
-
-
-
-
-
-
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
