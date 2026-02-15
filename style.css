@@ -121,7 +121,7 @@ body {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    padding-right: 60px;
+    padding-right: 80px;
 }
 
 .hero-image img {
@@ -320,6 +320,7 @@ footer {
     }
 
 }
+
 
 
 
